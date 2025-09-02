@@ -164,7 +164,7 @@
     }
     
     wsStatus = 'connecting';
-    ws = new WebSocket("ws://192.168.178.121:8080");
+    ws = new WebSocket("ws://127.0.0.1:8080");
 
     ws.onopen = () => {
       wsStatus = 'connected';
