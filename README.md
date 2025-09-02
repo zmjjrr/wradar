@@ -15,6 +15,10 @@ For any question you can add me on discord: @juvoy
 - **Bomb Tracking:** See the location of the bomb when placed during the game.
 
 ## Installation
+### All-In-One
+Go to [Releases](https://github.com/juvoy/wradar/releases/)
+
+Download Release.zip and double click on ```start.bat```
 
 ### From Source (Web)
 ```
