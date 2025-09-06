@@ -83,6 +83,7 @@ struct C_NetworkUtlVectorBase {
     uintptr_t data;
 };
 
+
 void WRadar::Start() {
     this->Logln("Starting WRadar...");
 
@@ -213,6 +214,9 @@ void WRadar::Start() {
             if (!pCSPlayerPawn)
                 continue;
 
+            
+
+
             auto buffer = m_pProxy->ReadMemory<std::array<char, 128>>(playerController + this->m_stRuntimeOffsets._p_iszPlayerName);
 
             uintptr_t pGameSceneNode = m_pProxy->ReadMemory<uintptr_t>(pCSPlayerPawn + this->m_stRuntimeOffsets._p_pGameSceneNode);
@@ -226,7 +230,6 @@ void WRadar::Start() {
                 pGameSceneNode + this->m_stRuntimeOffsets._p_m_vecOrigin);
             Vector3 eyeAngle = m_pProxy->ReadMemory<Vector3>(
                 pGameSceneNode + this->m_stRuntimeOffsets._p_m_angRotation);
-
 
             nlohmann::json player;
             player["id"] = i;
