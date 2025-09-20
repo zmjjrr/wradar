@@ -34,4 +34,3 @@ uintptr_t Proxy::GetModuleBase(std::string mod)
 	return it->second;
 }
 
-

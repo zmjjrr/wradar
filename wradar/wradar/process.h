@@ -20,7 +20,13 @@ public:
     template <typename type>
     type ReadMemory(uintptr_t addr) {
         type ret;
+        printf("call params: addr: 0x%llx, size: 0x%llx\n", addr, sizeof(type));
         ReadProcessMemory(this->m_hProcess, (LPCVOID)addr, &ret, sizeof(type), 0);
+        printf("return value: \n");
+        for (int i = 0; i < sizeof(type); i++) {
+            printf("%02x ", ((UINT8*)&ret)[i]);
+        }
+        printf("\n");
         return ret;
     }
 
@@ -59,6 +65,7 @@ public:
         }
 
         CloseHandle(hSnap);
+        printf("GetModuleBase return 0x%llx\n", modBaseAddr);
         return modBaseAddr;
     }
 private:

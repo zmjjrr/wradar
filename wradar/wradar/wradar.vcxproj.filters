@@ -320,6 +320,9 @@
     <ClInclude Include="memoryproxy.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="driver.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <Text Include="common\json\LICENSE.txt" />

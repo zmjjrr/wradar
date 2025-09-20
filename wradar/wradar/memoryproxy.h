@@ -1,5 +1,6 @@
 #pragma once
 
+#define WRADAR_USE_DRIVER
 #ifdef WRADAR_USE_DRIVER
 #include "driver.h"
 #define WR_D
@@ -13,7 +14,7 @@
 
 class Proxy {
 public:
-	Proxy();
+    Proxy();
     ~Proxy();
 
     template <typename type>

@@ -1,0 +1,35 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.14.36429.23 d17.14
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "wradar_driver", "wradar_driver.vcxproj", "{9AB0CB94-2340-F619-E37F-BBA0398A4696}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|ARM64 = Debug|ARM64
+		Debug|x64 = Debug|x64
+		Release|ARM64 = Release|ARM64
+		Release|x64 = Release|x64
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{9AB0CB94-2340-F619-E37F-BBA0398A4696}.Debug|ARM64.ActiveCfg = Debug|ARM64
+		{9AB0CB94-2340-F619-E37F-BBA0398A4696}.Debug|ARM64.Build.0 = Debug|ARM64
+		{9AB0CB94-2340-F619-E37F-BBA0398A4696}.Debug|ARM64.Deploy.0 = Debug|ARM64
+		{9AB0CB94-2340-F619-E37F-BBA0398A4696}.Debug|x64.ActiveCfg = Debug|x64
+		{9AB0CB94-2340-F619-E37F-BBA0398A4696}.Debug|x64.Build.0 = Debug|x64
+		{9AB0CB94-2340-F619-E37F-BBA0398A4696}.Debug|x64.Deploy.0 = Debug|x64
+		{9AB0CB94-2340-F619-E37F-BBA0398A4696}.Release|ARM64.ActiveCfg = Release|ARM64
+		{9AB0CB94-2340-F619-E37F-BBA0398A4696}.Release|ARM64.Build.0 = Release|ARM64
+		{9AB0CB94-2340-F619-E37F-BBA0398A4696}.Release|ARM64.Deploy.0 = Release|ARM64
+		{9AB0CB94-2340-F619-E37F-BBA0398A4696}.Release|x64.ActiveCfg = Release|x64
+		{9AB0CB94-2340-F619-E37F-BBA0398A4696}.Release|x64.Build.0 = Release|x64
+		{9AB0CB94-2340-F619-E37F-BBA0398A4696}.Release|x64.Deploy.0 = Release|x64
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {18F47290-9928-420F-AB2C-A52727CBF401}
+	EndGlobalSection
+EndGlobal

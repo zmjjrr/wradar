@@ -5,6 +5,7 @@
 
 #include <cs2_dumper/offsets.h>
 #include <cs2_dumper/client_dll.hpp>
+#include <iostream>
 
 #include <json/json.hpp>
 

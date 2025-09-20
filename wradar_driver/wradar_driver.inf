@@ -1,0 +1,62 @@
+;
+; wradar_driver.inf
+;
+
+[Version]
+Signature   = "$WINDOWS NT$"
+Class       = System ; TODO: specify appropriate Class
+ClassGuid   = {4d36e97d-e325-11ce-bfc1-08002be10318} ; TODO: specify appropriate ClassGuid
+Provider    = %ManufacturerName%
+CatalogFile = wradar_driver.cat
+DriverVer   = ; TODO: set DriverVer in stampinf property pages
+PnpLockdown = 1
+
+[DestinationDirs]
+DefaultDestDir = 13
+
+[SourceDisksNames]
+1 = %DiskName%,,,""
+
+[SourceDisksFiles]
+wradar_driver.sys  = 1,,
+
+;*****************************************
+; Install Section
+;*****************************************
+
+[Manufacturer]
+%ManufacturerName% = Standard,NT$ARCH$.10.0...16299 ; %13% support introduced in build 16299
+
+[Standard.NT$ARCH$.10.0...16299]
+%wradar_driver.DeviceDesc% = wradar_driver_Device, Root\wradar_driver ; TODO: edit hw-id
+
+[wradar_driver_Device.NT]
+CopyFiles = File_Copy
+
+[File_Copy]
+wradar_driver.sys
+
+;-------------- Service installation
+[wradar_driver_Device.NT.Services]
+AddService = wradar_driver,%SPSVCINST_ASSOCSERVICE%, wradar_driver_Service_Inst
+
+; -------------- wradar_driver driver install sections
+[wradar_driver_Service_Inst]
+DisplayName    = %wradar_driver.SVCDESC%
+ServiceType    = 1               ; SERVICE_KERNEL_DRIVER
+StartType      = 3               ; SERVICE_DEMAND_START
+ErrorControl   = 1               ; SERVICE_ERROR_NORMAL
+ServiceBinary  = %13%\wradar_driver.sys
+
+[wradar_driver_Device.NT.Wdf]
+KmdfService = wradar_driver, wradar_driver_wdfsect
+
+[wradar_driver_wdfsect]
+KmdfLibraryVersion = $KMDFVERSION$
+
+[Strings]
+SPSVCINST_ASSOCSERVICE = 0x00000002
+ManufacturerName = "<Your manufacturer name>" ;TODO: Replace with your manufacturer name
+DiskName = "wradar_driver Installation Disk"
+wradar_driver.DeviceDesc = "wradar_driver Device"
+wradar_driver.SVCDESC = "wradar_driver Service"

@@ -1,4 +1,4 @@
-//#define WRADAR_USE_DRIVER
+
 #include "wradar.h"
 
 #include <string>
